@@ -1,0 +1,47 @@
+.mainbox {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	background-color: white;
+	border: 2px solid black;
+}
+.secondbox {
+	top: -202px;
+	left: 0px;
+	position: relative;
+	width: 202px;
+	height: 204px;
+	background-color: black;
+
+
+
+
+	transition: height 1s ease-in-out;
+}
+.mainbox:hover .secondbox {
+	height: 50px;
+}
+.text {
+	padding-top: 75px;
+	width: 200px;
+	height: 125px;
+	text-align: center;
+	font-family: sans-serif;
+	background-color: #d1d1d1;
+	color: black;
+	font-weight: bold;
+}
+.boxtext {
+	padding: 75px;
+	padding-top: 50px;
+	text-transform: uppercase;
+	font-size-adjust: 20px;
+	font-weight: bold;
+	font-family: sans-serif;
+	color: white;
+
+	transition: opacity .5s ease-in-out;
+}
+.mainbox:hover .boxtext {
+	opacity: 0;
+}

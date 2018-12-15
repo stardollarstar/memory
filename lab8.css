@@ -1,0 +1,91 @@
+/*.all {
+	display: inline;
+}*/
+p {
+	display: inline;
+	position: absolute;
+	left: 0px;
+	top: -150px;
+	color: white;
+	background-color: black;
+	width: 720px;
+	height: 60px;
+	text-align: center;
+	font-family: sans-serif;
+	padding-top: 40px;
+	opacity: 0.7;
+}
+.background{
+	display: inline;
+	animation: opacity 6s ease-in-out;
+	animation-name: slider;
+	animation-iteration-count: infinite;
+	position: relative;
+}
+@keyframes slider{
+	0%{
+		opacity: 1;
+	}
+	25%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0;
+	}
+	75%{
+		opacity: 1;
+	}
+    100%{
+    	opacity: 0;
+    }
+}
+.mountain{
+	display: inline;
+	position: relative;
+	top: -405px;
+	animation: opacity 6s ease-in-out;
+	animation-name: lol;
+	animation-iteration-count: infinite;
+}
+@keyframes lol {
+	0% {
+		opacity: 0;
+	}
+	25% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	75% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.girl{
+	display: inline;
+	position: relative;
+	top: -810px;
+		animation: opacity 6s ease-in-out;
+	animation-name: rofl;
+	animation-iteration-count: infinite;
+}
+@keyframes rofl {
+	0% {
+		opacity: 0;
+	}
+	25% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}

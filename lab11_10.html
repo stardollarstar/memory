@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+	<style type="text/css">
+		#box {
+			border: 2px solid black;
+			padding: 10px;
+			width: 260px;
+			height: 180px;
+		}
+	</style>
+	<script type="text/javascript">
+		function func1(x) {
+			var x = document.getElementById("x").value;
+			var y = document.getElementById("y").value;
+			z= x*y;
+			document.getElementById("demo").innerHTML = z;
+		}
+		function func2(x) {
+			var x = document.getElementById("x").value;
+			var y = document.getElementById("y").value;
+			z= x/y;
+			document.getElementById("demo").innerHTML = z;
+		}
+	</script>
+</head>
+<body>
+	<div id="box">
+1st number: &nbsp;<input type="number" id="x"><br><br>
+2nd number: <input type="number" id="y"><br>
+<br>
+<button onclick="func1()">Multiply</button>
+<button onclick="func2()">Divide</button><br><br>
+The result is:<br><p id="demo"></p></div>
+</body>
+</html>

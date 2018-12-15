@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>XML</title>
+	<script type="text/javascript">
+		var xhttp = new XMLHttpRequest();
+		xhttp.open("GET","http://tsag-agaar.gov.mn/forecast_xml",false);
+		xhttp.send();
+		var doc = xhttp.responseXML;
+		for (var j = 0; j < 28; j++) {
+		for (var i = 0; i < 5; i++) {
+		city = doc.getElementsByTagName("city")[j].childNodes[0].nodeValue;
+		date = doc.getElementsByTagName("data")[j].getElementsByTagName("weather")[i].getElementsByTagName("date")[0].childNodes[0].nodeValue;
+
+		night = doc.getElementsByTagName("data")[j].getElementsByTagName("weather")[i].getElementsByTagName("temperatureNight")[0].childNodes[0].nodeValue;
+
+		day = doc.getElementsByTagName("data")[j].getElementsByTagName("weather")[i].getElementsByTagName("temperatureDay")[0].childNodes[0].nodeValue;
+
+		pinight = doc.getElementsByTagName("data")[j].getElementsByTagName("weather")[i].getElementsByTagName("phenoIdNight")[0].childNodes[0].nodeValue;
+
+		pnight = doc.getElementsByTagName("data")[j].getElementsByTagName("weather")[i].getElementsByTagName("phenoNight")[0].childNodes[0].nodeValue;
+
+		piday = doc.getElementsByTagName("data")[j].getElementsByTagName("weather")[i].getElementsByTagName("phenoIdDay")[0].childNodes[0].nodeValue;
+		pday = doc.getElementsByTagName("data")[j].getElementsByTagName("weather")[i].getElementsByTagName("phenoDay")[0].childNodes[0].nodeValue;
+		wnight = doc.getElementsByTagName("data")[j].getElementsByTagName("weather")[i].getElementsByTagName("windNight")[0].childNodes[0].nodeValue;
+		wday = doc.getElementsByTagName("data")[j].getElementsByTagName("weather")[i].getElementsByTagName("windDay")[0].childNodes[0].nodeValue;
+		// date = doc.getElementsByTagName("date")[2].childNodes[0].nodeValue;
+		// night = doc.getElementsByTagName("temperatureNight")[5].childNodes[0].nodeValue;
+		// day = doc.getElementsByTagName("temperatureDay")[5].childNodes[0].nodeValue;
+		// pinight = doc.getElementsByTagName("phenoIdNight")[5].childNodes[0].nodeValue;
+		// pnight = doc.getElementsByTagName("phenoNight")[5].childNodes[0].nodeValue;
+		// piday = doc.getElementsByTagName("phenoIdDay")[5].childNodes[0].nodeValue;
+		// pday = doc.getElementsByTagName("phenoDay")[5].childNodes[0].nodeValue;
+		// wnight = doc.getElementsByTagName("windNight")[5].childNodes[0].nodeValue;
+		// wday = doc.getElementsByTagName("windDay")[5].childNodes[0].nodeValue;
+	 	document.write("Хот = " +city+"<BR/>");
+		document.write("Он сар = " +date+"<BR/>");
+		document.write("Шөнөдөө = " +night+"<BR/>");
+		document.write("Өдөртөө = " +day+"<BR/>");
+		document.write("Хур тундас = " +pinight+"<BR/>");
+		document.write("Үүлшилт Шөнөдөө = " +pnight+"<BR/>");
+		document.write("Хур тундас = " +piday+"<BR/>");
+		document.write("Үүлшилт Өдөртөө = " +pday+"<BR/>");
+		document.write("Салхины хурд Шөнөдөө = " +wnight+"м/с<BR/>");
+		document.write("Салхины хурд Өдөртөө = " +wday+"м/с<BR/><BR/>");
+	}
+}
+	</script>
+</head>
+<body>
+<p id="demo"></p>
+</body>
+</html>

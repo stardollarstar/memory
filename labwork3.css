@@ -1,0 +1,466 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	overflow: hidden;
+	background: #1c1c1c;
+}
+#main {
+}
+#catalog {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#home {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: white;
+	width: 100%;
+	height: 100%;
+	transition: 1s;
+	z-index: 1;
+}
+.pic {
+	height: 768px;
+}
+#smalltext {
+	position: absolute;
+	width: 200px;
+	left: 550px;
+	top: 250px;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 15px;
+}
+#ballyellow {
+	position: absolute;
+	left: 535px;
+	top: 240px;
+	width: 40px;
+	height: 40px;
+	background: yellow;
+	border-radius: 40px;
+}
+#header {
+	position: absolute;
+	left: 550px;
+	top: 335px;
+	width: 500px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+#ballblue {
+	position: absolute;
+	left: 990px;
+	top: 320px;
+	width: 50px;
+	height: 50px;
+	background: teal;
+	border-radius: 50px;
+}
+#animatedtext {
+	position: absolute;
+	top: 450px;
+	left: 550px;
+	width: 230px;
+	height: 20px;
+	padding-left: 10px;
+	padding-top: 4px;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	font-weight: bold;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: .41em; /* Adjust as needed */
+  animation: 
+    typing 8s steps(11, end),
+    blink-caret .75s step-end infinite;
+    animation-iteration-count: infinite;
+}
+#blinker {
+	border: 1px solid black;
+	height: 20px;
+	position: absolute;
+	top: 450px;
+	left: 618px;
+}
+/* The typing effect */
+@keyframes typing {
+  0% { width: 50px }
+  40% { width: 230px }
+  50% { width: 50px; }
+  100% {
+  	width: 50px;
+  }
+}
+#animatedtexttwo {
+	position: absolute;
+	top: 450px;
+	left: 620px;
+	width: 230px;
+	height: 20px;
+	padding-left: 10px;
+	padding-top: 4px;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	font-weight: bold;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: .43em; /* Adjust as needed */
+  animation: 
+    typingtwo 8s steps(13, end),
+    blink-caret .75s step-end infinite;
+    animation-iteration-count: infinite;
+}
+@keyframes typingtwo {
+  0% { width: 0px }
+  50% { width: 0px; }
+  94% {
+  	width: 230px;
+  }
+  100% {
+  	width: 0px;
+  }
+}
+#mainbutton {
+	width: 20%;
+	height: 60px;
+	background: #a81c00;
+	position: absolute;
+	left: 80%;
+	padding-left: 10px;
+	transition: 1s;
+	z-index: 1;
+}
+#secondarybutton {
+	width: 25%;
+	height: 56px;
+	background: white;
+	position: relative;
+	left: 70%;
+	top: -29px;
+	border: 2px solid #a81c00;
+	overflow: hidden;
+	transition: 1s;
+}
+#lineone {
+	width: 40%;
+	top: 10px;
+	position: relative;
+	left: 30%;
+	height: 5px;
+	background: black; 
+	transition: .5s;
+}
+#secondarybutton:hover #lineone {
+	width: 70%;
+	left: 15%;
+}
+#linetwo {
+	width: 60%;
+	top: 19px;
+	position: relative;
+	left: 20%;
+	height: 5px;
+	background: black; 
+	transition: 0.5s;
+}
+#secondarybutton:hover #linetwo {
+	width: 70%;
+	left: 15%;
+}
+#linethree {
+	width: 40%;
+	top: 28px;
+	position: relative;
+	left: 30%;
+	height: 5px;
+	background: black; 
+	transition: .5s;
+}
+#secondarybutton:hover #linethree {
+	width: 70%;
+	left: 15%;
+}
+#buttontext {
+	text-transform: uppercase;
+	color: white;
+	font-size: 25px;
+	font-family: sans-serif;
+	font-weight: bold;
+	letter-spacing: 3px;
+	position: relative;
+	top: 15px;
+	left: 40px;
+	transition: 1s;
+}
+#secondarybutton:hover {
+	cursor: pointer;
+}
+#catalog {
+	width: 800px;
+	height: 50px;
+	position: absolute;
+	top: 17.5%;
+	left: 20%;
+}
+#homebutton {
+	font-family: sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 2px;
+	color: white;
+	width: 54px;
+}
+#homebutton:hover .underline {
+	cursor: pointer;
+	width: 54px;
+}
+
+#homebutton:hover {
+	cursor: pointer;
+}
+.underline {
+	position: relative;
+	width: 0px;
+	height: 1px;
+	background: white;
+	transition: 1s;
+}
+#labbutton {
+	font-family: sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 2px;
+	color: white;
+	position: relative;
+	top: -19px;
+	left: 20%;
+	width: 183.5px;
+}
+#labbutton:hover .underline {
+	cursor: pointer;
+	width: 100%;
+}
+
+#labbutton:hover {
+	cursor: pointer;
+}
+#conbutton {
+	font-family: sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 2px;
+	color: white;
+	position: relative;
+	left: 55%;
+	top: -38px;
+	width: 146.5px;
+}
+
+#conbutton:hover .underline {
+	cursor: pointer;
+	width: 100%;
+}
+
+#conbutton:hover {
+	cursor: pointer;
+}
+#labpage {
+	width: 100%;
+	height: 1080px;
+	background: white;
+	position: absolute;
+	top: 100%;
+	transform: scale(0.9);
+	transition: 1s;
+}
+#labone {
+	position: absolute;
+	left: 550px;
+	top: 150px;
+	height: 36px;
+	width: 176px;
+	background: white;
+	border: 2px solid black;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 25px;
+	padding: 10px;
+	padding-bottom: 0px;
+	transition: .5s;
+	overflow: hidden;
+}
+#labone:hover {
+	cursor: pointer;
+	background: black;
+	color: white;
+	height: 290px;
+}
+.field {
+	position: relative;
+	top: 10px;
+	width: 176px;
+	height: 36px;
+}
+.carrier {
+	position: relative;
+	left: -12px;
+	border: 2px solid black;
+	border-bottom: 2px solid white;
+	padding: 10px;
+	padding-bottom: 0px;
+	width: 176px;
+	height: 36px;
+	background: white;
+	text-decoration: none;
+	transition: 1s;
+}
+.carrier:hover {
+	background: black;
+	border-bottom: 2px solid black;
+}
+#labtwo {
+	position: absolute;
+	left: 800px;
+	top: 150px;
+	height: 36px;
+	width: 196px;
+	background: white;
+	border: 2px solid black;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 25px;
+	padding: 10px;
+	padding-bottom: 0px;
+	transition: .5s;
+	overflow: hidden;
+}
+#labtwo:hover {
+	cursor: pointer;
+	background: black;
+	color: white;
+	height: 290px;
+}
+.carrier2 {
+	position: relative;
+	left: -12px;
+	border: 2px solid black;
+	border-bottom: 2px solid white;
+	padding: 10px;
+	padding-bottom: 0px;
+	width: 196px;
+	height: 36px;
+	background: white;
+	text-decoration: none;
+	transition: 1s;
+}
+.carrier2:hover {
+	background: black;
+	border-bottom: 2px solid black;
+}
+#labthree {
+	position: absolute;
+	left: 1070px;
+	top: 150px;
+	height: 36px;
+	width: 206px;
+	background: white;
+	border: 2px solid black;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 25px;
+	padding: 10px;
+	padding-bottom: 0px;
+	transition: .5s;
+	overflow: hidden;
+}
+#labthree:hover {
+	cursor: pointer;
+	background: black;
+	color: white;
+	height: 240px;
+}
+.carrier3 {
+	position: relative;
+	left: -12px;
+	border: 2px solid black;
+	border-bottom: 2px solid white;
+	padding: 10px;
+	padding-bottom: 0px;
+	width: 206px;
+	height: 36px;
+	background: white;
+	text-decoration: none;
+	transition: 1s;
+}
+.carrier3:hover {
+	background: black;
+	border-bottom: 2px solid black;
+}
+#contacter {
+	width: 100%;
+	height: 1080px;
+	background: #c3c3c3;
+	position: absolute;
+	top: 100%;
+	transform: scale(0.9);
+	transition: 1s;
+}
+.ico {
+	width: 75px;
+	height: 75px;
+	position: absolute;
+	top: 150px;
+	left: 700px;
+}
+#icoone {
+	border-radius: 10px;
+}
+#icotwo {
+	position: absolute;
+	left: 900px;
+}
+#icothree {
+	position: absolute;
+	left: 1100px;
+}
+#cone {
+	position: absolute;
+	top: 240px;
+	left: 670px;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#ctwo {
+	position: absolute;
+	top: 240px;
+	left: 880px;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#cthree {
+	position: absolute;
+	top: 240px;
+	left: 1090px;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+}

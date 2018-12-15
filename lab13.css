@@ -1,0 +1,127 @@
+#quizone {
+	width: 400px;
+}
+.quiz {
+	margin-left: 40px;
+	border: 2px solid black;
+	height: 20px;
+	color: black;
+	background: white;
+	font-family: sans-serif;
+	padding: 5px;
+
+	transition: all 0.7s ease;
+	transform: scale(1);
+}
+.quiz:hover {
+	color: white;
+	background: black;
+	cursor: pointer;
+}
+#quiztwo {
+	width: 400px;
+}
+.container {
+	width: 400px;
+	display: inline-block;
+	transform: scale(0.8);
+	margin-left: 20px;
+}
+#form {
+}
+.form {
+	background: #ddd;
+	width: 300px;
+	height: 30px;
+}
+.text {
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 40px;
+	display: inline;
+}
+#button {
+	width: 200px;
+	height: 35px;
+	background: white;
+	border: 2px solid black;
+	border-radius: 20px;
+	position: absolute;
+	font-family: sans-serif;
+	font-weight: bold;
+	top: 65%;
+	left: 70%;
+	text-align: center;
+	padding-top: 15px;
+	transition: all 0.5s ease;
+	pointer-events: none;
+}
+#button:hover {
+	cursor: pointer;
+ 	color: white;
+ 	background: black;
+}
+#console {
+	height: 70px;
+	width: 380px;
+	color: white;
+	border-radius: 20px;
+	padding-left: 20px;
+	background: black;
+	position: absolute;
+	top: 80%;
+	left: 65%;
+	font-weight: bold;
+	font-family: sans-serif;
+
+	animation-name: first;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	animation-play-state: paused; 
+}
+@keyframes first {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+#timetext {
+	font-weight: bold;
+	font-family: sans-serif;
+	position: absolute;
+	top: 86%;
+	left: 10%;
+}
+#timer {
+	position: absolute;
+	top: 84.7%;
+	left: 7.7%;
+	width: 100px;
+	height: 30px;
+	border: 3px solid black;
+}
+#blocker {
+	position: relative;
+	top: -3px;
+	left: -10px;
+	width: 120px;
+	height: 50px;
+	background: white;
+	transform: rotate(90deg);
+	animation-name: second;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: reverse;
+}
+@keyframes second {
+	0% {
+		transform: rotate(90deg);
+	}
+	100% {
+		transform: rotate(450deg);
+	}
+}

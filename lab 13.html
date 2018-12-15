@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz</title>
+	<link rel="stylesheet" type="text/css" href="lab13.css">
+	<script type="text/javascript">
+		var collector = [];
+		var collectortwo = [];
+		var date = new Date();
+		var confirm = [];
+		var i = 0;
+			var	j = 0;
+			var timer = setInterval(timer, 1000);
+								function timer() {
+									if(confirm == "confirmed"){
+										clearInterval(timer);
+										document.getElementById("blocker").style.animationPlayState = "paused";
+									}
+									else{
+										if(j < 10){
+												i = i + 1;
+												document.getElementById("timetext").innerHTML ="0"+j+":0" +i;
+											if (i>=10) {
+													document.getElementById("timetext").innerHTML ="0"+j+ ":" +i;
+									}
+									}	
+										else {
+												i = i + 1;
+												document.getElementById("timetext").innerHTML = j+":0" +i;
+											if (i>=10) {
+													document.getElementById("timetext").innerHTML = j+ ":" +i;
+									}
+								}
+										if(i == 59){
+											i = -1;
+											j = j + 1;
+									}
+								}
+							}
+		function quizone(id) {
+			collectortwo.push(1);
+			document.getElementById(id).style.color = "white";
+			document.getElementById(id).style.background = "black";
+			document.getElementById("quizone").style.pointerEvents = "none";
+			if(id == 1) {
+				collector.push(id);
+			}
+		}
+		function quiztwo(id) {
+			collectortwo.push(2);
+			document.getElementById(id).style.color = "white";
+			document.getElementById(id).style.background = "black";
+			document.getElementById("quiztwo").style.pointerEvents = "none";
+			if(id == 6) {
+				collector.push(id);
+			}
+		}
+		function quizthree(id) {
+			collectortwo.push(3);
+			document.getElementById(id).style.color = "white";
+			document.getElementById(id).style.background = "black";
+			document.getElementById("quizthree").style.pointerEvents = "none";
+			if(id == 8) {
+				collector.push(id);
+			}
+		}
+		function quizfour(id) {
+			collectortwo.push(4);
+			document.getElementById(id).style.color = "white";
+			document.getElementById(id).style.background = "black";
+			document.getElementById("quizfour").style.pointerEvents = "none";
+			if(id == 11) {
+				collector.push(id);
+			}
+		}
+		function quizfive(id) {
+			collectortwo.push(5);
+			document.getElementById(id).style.color = "white";
+			document.getElementById(id).style.background = "black";
+			document.getElementById("quizfive").style.pointerEvents = "none";
+			if(id == 13) {
+				collector.push(id);
+			}
+		}
+		var counter = setInterval(counter, 1000);
+		function counter() {
+			var x = collectortwo.length;
+			if(x == 5){
+				document.getElementById("button").style.pointerEvents = "auto";
+			}
+		}
+		function submit() {
+			confirm.push("confirmed");
+			var name = document.getElementById("name").value;
+			var datex = document.getElementById("date");
+			console.log(datex);
+			var x = collector.length;
+			var year = date.getFullYear();
+			var month = date.getMonth();
+			var day = date.getDate();
+			document.getElementById("button").style.color = "white";
+			document.getElementById("button").style.background = "black";
+			document.getElementById("console").style.animationPlayState = "running";
+			document.getElementById("demo").innerHTML = name+ " та " +year+ " оны " +month+ " сарын " +day+ " өдөр шалгалтнаас " +x+ " оноо авлаа.";
+		}
+	</script>
+</head>
+<body>
+<div id="form">
+	<p class="text">Name:</p><input class="form" type="text" id="name"><br><br></div>
+<div id="main">
+<div class="container" id="quizone">
+	<h3>1. Element ийн дээд хэсгээс 50px ын padding хийхийн тулд</h3>
+		<p class="quiz" id="1" onclick="quizone(1)"><strong>A.</strong> padding-top: 50px;<br>
+		<p class="quiz" id="2" onclick="quizone(2)"><strong>B.</strong> padding: 50px;<br>
+		<p class="quiz" id="3" onclick="quizone(3)"><strong>C.</strong> padding-bottom: 50px;
+</div>
+<div id="quiztwo" class="container">
+	<h3>2. What does CSS stand for?</h3>
+		<p class="quiz" id="4" onclick="quiztwo(4)"><strong>A.</strong> Computer Style Sheets<br>
+		<p class="quiz" id="5" onclick="quiztwo(5)"><strong>B.</strong> Colorful Style Sheets<br>
+		<p class="quiz" id="6" onclick="quiztwo(6)"><strong>C.</strong> Cascading Style Sheets
+</div>
+<div id="quizthree" class="container">
+	<h3>3.What is the correct HTML for referring to an external style sheet?</h3>
+		<p class="quiz" id="7" onclick="quizthree(7)"><strong>A.</strong><<k>stylesheet>mystyle.css<</k>/stylesheet> <br>
+		<p class="quiz" id="8" onclick="quizthree(8)" style="width: 425px;"><strong>B.</strong> <<k>link rel="stylesheet" type="text/css" href="mystyle.css">
+<br>
+		<p class="quiz" id="9" onclick="quizthree(9)"><strong>C.</strong> <<k>style src="mystyle.css>
+</div>
+<div class="container" id="quizfour">
+	<h3>4. Inside which HTML element do we put the JavaScript?</h3>
+		<p class="quiz" id="10" onclick="quizfour(10)"><strong>A.</strong> <<k>Javascript><br>
+		<p class="quiz" id="11" onclick="quizfour(11)"><strong>B.</strong> <<k>script><br>
+		<p class="quiz" id="12" onclick="quizfour(12)"><strong>C.</strong> <<k>js>
+</div>
+<div class="container" id="quizfive">
+	<h3>5. What is the correct HTML element for inserting a line break?</h3>
+		<p class="quiz" id="13" onclick="quizfive(13)"><strong>A.</strong> <<k>br><br>
+		<p class="quiz" id="14" onclick="quizfive(14)"><strong>B.</strong> <<k>lb><br>
+		<p class="quiz" id="15" onclick="quizfive(15)"><strong>C.</strong> <<k>break>
+</div>
+</div>
+<div id="button" onclick="submit()">Submit</div>
+<div id="console"><p id="demo">bla</p></div>
+<div id="timer"><div id="blocker"></div></div>
+<div id="timetext">00:00</div>
+</body>
+</html>
